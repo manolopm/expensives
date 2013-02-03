@@ -1,0 +1,27 @@
+%h1 Listing entries
+
+%table
+  %tr
+    %th Concept
+    %th Quantity
+    %th Recurse monthly
+    %th Recurse yearly
+    %th Date
+    %th
+    %th
+    %th
+
+  - @entries.each do |entry|
+    %tr
+      %td= entry.concept
+      %td= entry.quantity
+      %td= entry.recurse_monthly
+      %td= entry.recurse_yearly
+      %td= entry.date
+      %td= link_to 'Show', entry
+      %td= link_to 'Edit', edit_entry_path(entry)
+      %td= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Entry', new_entry_path

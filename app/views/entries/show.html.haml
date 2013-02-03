@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Concept:
+  = @entry.concept
+%p
+  %b Quantity:
+  = @entry.quantity
+%p
+  %b Recurse monthly:
+  = @entry.recurse_monthly
+%p
+  %b Recurse yearly:
+  = @entry.recurse_yearly
+%p
+  %b Date:
+  = @entry.date
+
+= link_to 'Edit', edit_entry_path(@entry)
+\|
+= link_to 'Back', entries_path

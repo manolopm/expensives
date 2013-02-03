@@ -1,0 +1,12 @@
+= simple_form_for(@entry) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :concept
+    = f.input :quantity
+    = f.input :recurse_monthly
+    = f.input :recurse_yearly
+    = f.input :date
+
+  .form-actions
+    = f.button :submit
