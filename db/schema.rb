@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203160248) do
+ActiveRecord::Schema.define(:version => 20130203162349) do
+
+  create_table "entries", :force => true do |t|
+    t.string   "concept"
+    t.decimal  "quantity",        :precision => 8, :scale => 2
+    t.boolean  "recurse_monthly"
+    t.boolean  "recurse_yearly"
+    t.date     "date"
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
