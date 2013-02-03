@@ -6,7 +6,7 @@
     = f.input :quantity
     = f.input :recurse_monthly
     = f.input :recurse_yearly
-    = f.input :date
-
+    = f.date_select :date, :order => [:month, :year]
+    
   .form-actions
     = f.button :submit

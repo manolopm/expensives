@@ -14,7 +14,7 @@
   = @entry.recurse_yearly
 %p
   %b Date:
-  = @entry.date
+  = @entry.date.strftime('%b %Y')
 
 = link_to 'Edit', edit_entry_path(@entry)
 \|
